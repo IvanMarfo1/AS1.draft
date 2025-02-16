@@ -10,7 +10,21 @@ p {
 h3 {
     text-decoration: underline;
 }
-  
+
+ul:nth-child(1) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #777986;
+    padding: 15px 20px;
+    margin: 0;   
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.nobullets{
+    list-style: none;
+}
 
  
   
