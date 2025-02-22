@@ -1,6 +1,16 @@
 
   
 
+
+
+
+
+
+
+
+
+
+
 h1 {
     
     color: rgb(41, 41, 169);
@@ -10,13 +20,13 @@ h1 {
     font-family: "Rubik Glitch", serif;
     font-weight: 400;
     font-style: normal;
+    grid-area: header;
 }
 .pheader{
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 15px 20px;
-    
     font-family: "Rubik Glitch", serif;
 }
 p {
@@ -37,6 +47,7 @@ ul:nth-child(1) {
     top: 0;
     left: 0;
     width: 100%;
+    
 }
 .nobullets{
     list-style: none;
