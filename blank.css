@@ -1,0 +1,81 @@
+/* General Styling */
+body {
+    background-color: black;
+    color: rgb(190, 193, 201);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-areas:
+        "nav"
+        "header"
+        "main"
+        "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+}
+
+/* Header */
+header {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(29, 33, 114);
+    grid-area: header;
+}
+
+h1 {
+    color: rgb(41, 41, 169);
+    font-family: "Rubik Glitch", serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 1em;
+}
+
+/* Navigation */
+nav {
+    background-color: rgba(29, 33, 114, 0.8);
+    padding: 10px;
+    text-align: center;
+    grid-area: nav;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    text-align: center;
+    grid-area: main;
+}
+
+h3 {
+    text-decoration: underline;
+    color: white;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: rgb(29, 33, 114);
+    color: white;
+    grid-area: footer;
+}
