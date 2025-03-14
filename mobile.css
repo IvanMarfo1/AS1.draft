@@ -1,0 +1,63 @@
+body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "nav"
+        "header"
+        "main"
+        "footer";
+}
+
+nav {
+    display: block;
+    background-color: yellow;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100vh;
+    }
+
+/* Show the nav when clicked */
+#clicked:target nav {
+    display: block;
+}
+
+/* Hamburger Icon */
+.showNav {
+    height: 0.8em;
+    width: 1.25em;
+    display: block;
+    border-top: 0.2em solid white;
+    border-bottom: 0.2em solid white;
+    }
+
+/* Middle bar of hamburger */
+.showNav::before {
+    content: '';
+    position: absolute;
+    width: 1.25em;
+    margin-top: 0.3em;
+    border-top: 0.2em solid #fff;
+    }
+
+/* When clicked, toggle visibility */
+#clicked .on {
+    display: block;
+}
+
+#clicked .off {
+    display: none;
+}
+
+#clicked:target .on {
+    display: none;
+}
+
+#clicked:target .off {
+    display: block;
+}
+
+
+
