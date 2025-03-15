@@ -1,33 +1,26 @@
-/* General Styling */
 body {
     background-color: black;
     color: rgb(190, 193, 201);
     font-family: "Rubik Glitch", serif;
     display: grid;
-    grid-template-rows: auto;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas:
-        "nav"
-        "header"
-        "main"
-        "footer";
-    margin: 0;
-    padding: 0;
+        "header header header"
+        "nav main main"
+        "footer footer footer";
+    min-height: 100vh;
 }
-
-
-
 
 /* Navigation Bar */
 nav {
     background-color: rgba(29, 33, 114, 0.8);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
     padding: 10px 0;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    grid-area: ;
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul {
@@ -62,27 +55,14 @@ header {
     padding: 40px;
     color: rgb(121, 13, 13);
     font-size: 1.5rem;
-    grid-area: "header";
+    grid-area: header;
 }
 
 /* Main Content */
 main {
     padding: 20px;
     text-align: center;
-    grid-area: "main";
-}
-
-h3 {
-    text-decoration: underline;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    padding: 5px 0;
+    grid-area: main;
 }
 
 /* Footer */
@@ -91,5 +71,5 @@ footer {
     padding: 20px;
     color: white;
     background-color: rgba(29, 33, 114, 0.8);
-    grid-area: "footer";
+    grid-area: footer;
 }
