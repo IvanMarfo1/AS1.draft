@@ -1,29 +1,56 @@
 body {
+    background-color: black;
+    color: rgb(190, 193, 201);
+    font-family: "Rubik Glitch", serif;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto;
     grid-template-areas:
-        "header"
         "nav"
+        "header"
         "main"
         "footer";
 }
 
+main {
+    padding: 0px;
+    text-align: center;
+    grid-area: "main";
+}
+h1 {
+    text-align: center;
+    padding: 40px;
+    color: rgb(121, 13, 13);
+    font-size: 3em;
+    grid-area: "header";
+}
+
 /* Initially hide nav */
 nav {
+    background-color: rgba(29, 33, 114, 0.8);
+    padding: 10px 0;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
     display: none;
-    background-color: yellow;
     position: fixed;
     top: 0;
     left: 50%;
     width: 50%;
     height: 100vh;
+    grid-area: "nav";
 }
 
-/* Show nav when clicked */
-#clicked:target nav {
-    display: block;
+footer {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    
+    grid-area: "footer";
 }
+
+ul{
+    list-style: none;
+}
+
 
 /* Hamburger Icon */
 .showNav {
@@ -44,11 +71,11 @@ nav {
 }
 
 /* Toggle Visibility */
-.on {
+#clicked .on {
     display: block;
 }
 
-.off {
+#clicked .off {
     display: none;
 }
 
@@ -57,5 +84,9 @@ nav {
 }
 
 #clicked:target .off {
+    display: block;
+}
+
+#clicked:target nav {
     display: block;
 }
